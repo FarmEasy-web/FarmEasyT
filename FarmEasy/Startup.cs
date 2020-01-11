@@ -83,7 +83,7 @@ namespace FarmEasy
             var _roleManager = serviceProvider.GetRequiredService<RoleManager<RoleMaster>>();
             var _userManager = serviceProvider.GetRequiredService<UserManager<UserMaster>>();
 
-            var userResult=await _userManager.CreateAsync(new UserMaster { UserName="Admin",Email="administrator@gmail.com",FirstName="Admin",LastName="Admin" },"Admin@123");
+            var userResult=await _userManager.CreateAsync(new UserMaster { UserName="Admin",Email="administrator@gmail.com",FirstName="Admin",LastName="Admin",EmailConfirmed=true },"Admin@123");
             
             string[] roleNames = {"Admin","Farmer","Laboratry"};
            
